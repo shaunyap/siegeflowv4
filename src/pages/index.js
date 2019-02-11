@@ -6,8 +6,8 @@ class IndexPage extends Component {
     render() {
         return (
         <Layout>
-            <section className="row lead">
-            <div>Hello world!</div>
+            <section className="lead">
+            <h1>Hello world!</h1>
             </section>
         </Layout>
     )}
