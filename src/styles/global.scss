@@ -1,5 +1,12 @@
 @import "variables";
+@import "responsive";
+@import "nav";
 
 body {
-  background-color: $PRIMARY;
+  background-color: $BGCOLOR;
+  margin: 0;
+
+  main {
+    margin: 0 1rem;
+  }
 }

@@ -1,0 +1,17 @@
+.topbar {
+  background-color: $PRIMARY;
+  color: $WHITE;
+  min-height: 35px;
+
+  ul {
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+
+    li {
+      display: inline;
+      margin: 0rem 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
