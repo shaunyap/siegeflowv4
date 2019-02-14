@@ -9,16 +9,20 @@ class IndexPage extends Component {
             <section className="hero flex-center">
               <div className="intro">
                 <h1>Hello world!</h1>
-                <p>Hello! My name is Shaun. Born and raised in sunny Singapore, I am a digital marketer and web developer currently living in Seattle by way of Dubai. </p>
-                <p>I’ve spent my career creating digital experiences and strategic brand communications, working with everyone from large media agencies to venture-backed startups, winning some awards along the way. Then I went indie.</p>
-                <p>If you are looking to build your digital capabilities, align your brand strategy, or want to hang out for coffee, get in touch here!</p>
+                <p>I'm Shaun, and I'm looking for a career switch to React or iOS development. I've spent the last four years working on personal coding projects, and sometimes even maneuvering into my full-time gig.</p>
+
+                <p>Previously, I've had an exciting career in digital marketing which has taken me everywhere from Singapore to Dubai, San Francisco to Taipei. I've even picked up some awards along the way.</p>
+
+                <p>Despite that, I've always had a niggling feeling that my true passions lay elsewhere. My journey has taken me into the world of development. And after years of learning and experimenting, I'm ready to show I have what it takes to thrive.</p>
+
+                <p> So let me buy you coffee. Better yet, let me show you on a whiteboard.</p>
               </div>
             </section>
             <section className="split-container flex-center-med-up">
               <div className="left-container">
                 <div className="lefty flex-center v-center">
                   <div>
-                      <h2>Projects</h2>
+                      <h2>Past Projects</h2>
                       <ul>
                         <li>thing</li>
                         <li>thing</li>

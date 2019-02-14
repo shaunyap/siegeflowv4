@@ -4,5 +4,15 @@ module.exports = {
     author: "Shaun Yap",
     description: "A frontend developer portfolio built on Gatsby.js"
   },
-   plugins: [`gatsby-plugin-sass`]
+   plugins: [
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          path: `${__dirname}/src/posts`,
+          name: "posts",
+        },
+      },
+      `gatsby-transformer-remark`,
+      `gatsby-plugin-sass`,
+    ]
 }
