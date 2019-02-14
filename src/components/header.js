@@ -4,16 +4,15 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <head>
-          <title>Siegeflow</title>
-        </head>
-        <nav className = "topbar">
-          <ul className = "hide-on-mobile">
-            <li>Siegeflow</li>
-            <li>About</li>
-            <li>Work</li>
-          </ul>
-        </nav>
+        <header>
+          <nav className = "topbar">
+            <ul className = "hide-on-mobile">
+              <li>Siegeflow</li>
+              <li>About</li>
+              <li>Work</li>
+            </ul>
+          </nav>
+        </header>
       </div>
     )
   }

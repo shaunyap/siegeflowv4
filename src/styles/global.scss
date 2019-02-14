@@ -1,12 +1,79 @@
 @import "variables";
 @import "responsive";
 @import "nav";
+@import "home";
 
+
+// General
 body {
   background-color: $BGCOLOR;
   margin: 0;
+  font-family: 'Noto Sans', sans-serif;
 
   main {
     margin: 0 1rem;
   }
+
+  .hero {
+    min-height: 30vh;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+  }
+
+  .split-container {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .left-container, .right-container {
+    @media screen and (min-width: $medium) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $medium) {
+      width: 100%;
+    }
+
+    ul {
+      list-style-type: none;;
+    }
+  }
+
+  .lefty, .righty {
+    min-height: 350px;
+  }
+  .lefty {
+    background-color: $PRIMARY;
+  }
+
+  .righty {
+    background-color: $ACCENT;
+  }
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+// Flexclasses
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-med-up {
+    @media screen and (min-width: $medium) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
 }
