@@ -12,7 +12,19 @@ module.exports = {
           name: "posts",
         },
       },
-      `gatsby-transformer-remark`,
+      {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 590,
+              }
+            }
+          ]
+        }
+      }, 
       `gatsby-plugin-sass`,
       `gatsby-remark-copy-linked-files`,
       `gatsby-transformer-sharp`,

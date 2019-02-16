@@ -12,13 +12,11 @@ export default props => {
               <title>Siegeflow</title>
               <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet" />
           </Helmet>
-
-          <title>Siegeflow</title>
           <Header />
-            <main>
-              {props.children}
-              <footer className="flex-center">Copyright siegeflow 2019. Terms and Conditions | Privacy Policy</footer>
-            </main>
+          <main>
+            {props.children}
+          </main>
+          <footer className="flex-center">Copyright siegeflow 2019. Terms and Conditions | Privacy Policy</footer>
         </div>
     )
 }

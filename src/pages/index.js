@@ -24,7 +24,7 @@ class IndexPage extends Component {
                   <div>
                       <h2>Past Projects</h2>
                       <ul>
-                        <li>thing</li>
+                        <li><a href="./projects/chatq">Creating a referral rewards system with Viral Loops and React.js</a></li>
                         <li>thing</li>
                         <li>thing</li>
                       </ul>

@@ -4,7 +4,7 @@ date: "2019-02-15"
 title: "Creating a referral rewards system with Viral Loops and React.js"
 
 ---
-![Chat Q Case Study](/images/ChatQCaseStudy.jpg "Chat Q Case Study Lead Image")
+![Chat Q Case Study](./ChatQCaseStudy.jpg)
 
 Chat Q is a social chat app that allows investors to get insight from reputable community members.
 

@@ -6,8 +6,16 @@
 
 
 // General
-html, body {
-  height: 100%
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#root {
+   min-height:100%;
+   width:100%;
+   position:absolute;
 }
 
 body {
@@ -39,8 +47,27 @@ body {
       width: 100%;
     }
 
+    h2 {
+      color: $MEDGREY;
+    }
+
     ul {
-      list-style-type: none;;
+      list-style-type: none;
+      list-style-position: inside;
+      padding-left: 0;
+
+      li {
+        color: $LIGHTGREY;
+
+        a {
+          color: $LIGHTGREY;
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -52,7 +79,6 @@ body {
     background-color: $BLACK;
     color: $WHITE;
     padding: 1rem 0;
-    margin-top: 1rem;
   }
 
   .lefty, .righty {
