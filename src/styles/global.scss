@@ -2,9 +2,14 @@
 @import "responsive";
 @import "nav";
 @import "home";
+@import "blog";
 
 
 // General
+html, body {
+  height: 100%
+}
+
 body {
   background-color: $BGCOLOR;
   margin: 0;
@@ -37,6 +42,17 @@ body {
     ul {
       list-style-type: none;;
     }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $BLACK;
+    color: $WHITE;
+    padding: 1rem 0;
+    margin-top: 1rem;
   }
 
   .lefty, .righty {
