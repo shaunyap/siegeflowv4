@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Frontend development | Siegeflow",
+    title: "React.JS / Swift development | Siegeflow",
     author: "Shaun Yap",
-    description: "A frontend developer portfolio built on Gatsby.js"
+    description: "A frontend developer portfolio built using Gatsby.js"
   },
    plugins: [
       {
