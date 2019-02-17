@@ -24,9 +24,17 @@ export default ({ data }) => {
                     <div>
                         <h2>Projects</h2>
                         <ul>
-                          <li><a href="./projects/chatq">Creating a referral rewards system with Viral Loops and React.js</a></li>
-                          <li>thing</li>
-                          <li>thing</li>
+                        {data.allMarkdownRemark.edges
+                          .filter(({node}) => node.frontmatter.category==="project") 
+                          .map( ({ node }, index) => 
+                          (
+                            <li key={index}>
+                              <Link to = {node.frontmatter.path}>
+                                {node.frontmatter.title}
+                              </Link>
+                            </li>
+                          )
+                        )}
                         </ul>
                     </div>
                   </div>
@@ -36,7 +44,9 @@ export default ({ data }) => {
                     <div>
                         <h2>Blog</h2>
                         <ul>
-                        {data.allMarkdownRemark.edges.map( ({ node }, index) => 
+                        {data.allMarkdownRemark.edges
+                          .filter(({node}) => node.frontmatter.category==="blog") 
+                          .map( ({ node }, index) => 
                           (
                             <li key={index}>
                               <Link to = {node.frontmatter.path}>
@@ -56,14 +66,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 query getMarkdownPosts {
-  allMarkdownRemark (filter: {
-      frontmatter:{
-        category:{
-          eq:"blog"
-        }
-      }
-    },
-    limit: 5
+  allMarkdownRemark (
     sort: { fields: [frontmatter___date], order: DESC }
   )
     {
