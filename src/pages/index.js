@@ -22,7 +22,7 @@ export default ({ data }) => {
                 <div className="left-container">
                   <div className="lefty flex-center v-center">
                     <div>
-                        <h2>Past Projects</h2>
+                        <h2>Projects</h2>
                         <ul>
                           <li><a href="./projects/chatq">Creating a referral rewards system with Viral Loops and React.js</a></li>
                           <li>thing</li>
@@ -36,7 +36,7 @@ export default ({ data }) => {
                     <div>
                         <h2>Blog</h2>
                         <ul>
-                        {data.allMarkdownRemark.edges.map(({ node }, index) => 
+                        {data.allMarkdownRemark.edges.map( ({ node }, index) => 
                           (
                             <li key={index}>
                               <Link to = {node.frontmatter.path}>
@@ -55,16 +55,28 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query {
-    allMarkdownRemark {
+query getMarkdownPosts {
+  allMarkdownRemark (filter: {
+      frontmatter:{
+        category:{
+          eq:"blog"
+        }
+      }
+    },
+    limit: 5
+    sort: { fields: [frontmatter___date], order: DESC }
+  )
+    {
       edges {
         node {
           frontmatter {
-            title
-            path
+              title
+              path
+              date
+              category
           }
         }
       }
     }
-  }
+}
 `

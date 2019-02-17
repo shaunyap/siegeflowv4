@@ -2,6 +2,7 @@
 path: "/projects/chatq"
 date: "2019-02-15"
 title: "Creating a referral rewards system with Viral Loops and React.js"
+category: "project"
 
 ---
 ![Chat Q Case Study](./ChatQCaseStudy.jpg)
