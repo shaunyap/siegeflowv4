@@ -21,10 +21,12 @@ body {
 body {
   background-color: $BGCOLOR;
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
 
   main {
     margin: 0 1rem;
+    @media screen and (max-width: $xsmall) {
+      padding-bottom: 60px;
+    }
   }
 
   .hero {
@@ -79,6 +81,10 @@ body {
     background-color: $BLACK;
     color: $WHITE;
     padding: 1rem 0;
+
+    @media screen and (max-width: $xsmall) {
+      font-size: 0.7em;
+    }
   }
 
   .lefty, .righty {
@@ -94,6 +100,10 @@ body {
 }
 
 // Typography
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Fjalla One', sans-serif;
 }
@@ -101,6 +111,12 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2em;
 }
+
+p {
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+
 
 // Flexclasses
 .flex-center {
