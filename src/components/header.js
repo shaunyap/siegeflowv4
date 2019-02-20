@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import { bubble as Menu } from 'react-burger-menu';
 import { confetti } from 'dom-confetti';
+const confettiConfig = {
+  angle: "0",
+  spread: 45,
+  startVelocity: 100,
+  elementCount: "150",
+  dragFriction: 0.1,
+  duration: 3000,
+  delay: 0,
+  width: "10px",
+  height: "10px",
+  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+};
 
 class Header extends Component {
   showSettings (event) {
@@ -8,18 +20,6 @@ class Header extends Component {
   }
   componentDidMount() {
     const button = document.querySelector("#menu-logo");
-    const confettiConfig = {
-      angle: "0",
-      spread: 45,
-      startVelocity: 100,
-      elementCount: "150",
-      dragFriction: 0.1,
-      duration: 3000,
-      delay: 0,
-      width: "10px",
-      height: "10px",
-      colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
-    };
     button.addEventListener("click", () => confetti(button, confettiConfig));
   }
   render() {

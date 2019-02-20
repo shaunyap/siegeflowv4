@@ -8,9 +8,9 @@ export default ({ data }) => {
               <section className="hero flex-center">
                 <div className="intro">
                   <h1>Hello world!</h1>
-                  <p>I'm Shaun, I've spent the last four years working on <a href="/projects">personal coding projects</a>, and now I'm looking for a career switch to React or iOS development.</p>
+                  <p>I'm Shaun, and after spending the last four years working on <a href="/">personal coding projects</a>, I'm now looking for a career switch to React or iOS development.</p>
 
-                  <p>Previously, I've had an exhilarating career in digital marketing which has taken me everywhere from Singapore to Dubai, San Francisco to Taipei. <span id="sma-hover">I've even picked up some awards along the way.</a></p>
+                  <p>Previously, I've had an exhilarating career in digital marketing which has taken me everywhere from Singapore to Dubai, San Francisco to Taipei. <span id="sma-hover">I've even picked up some awards along the way.</span></p>
 
                   <p>Despite that, I've always had a feeling that my true passions lay elsewhere. And after years of tinkering and experimenting, I'm ready to show I have what it takes to thrive.</p>
 
