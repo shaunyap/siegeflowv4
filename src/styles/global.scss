@@ -99,6 +99,24 @@ body {
   }
 }
 
+// Grid
+.flexgrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 25px;
+
+  @media screen and (max-width: $xsmall) {
+    width: 100%;
+  }
+}
+
+
 // Typography
 body{
   font-family: 'Noto Sans', sans-serif;

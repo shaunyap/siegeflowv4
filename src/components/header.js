@@ -32,7 +32,6 @@ class Header extends Component {
           <a id="projects" className="menu-item" href="/projects">Projects</a>
           <a id="blog" className="menu-item" href="/blog">Blog</a>
           <a id="contact" className="menu-item" href="/contact">Contact</a>
-          <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
         </Menu>
         </header>
       </div>
