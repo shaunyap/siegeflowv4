@@ -24,9 +24,7 @@ body {
 
   main {
     margin: 0 1rem;
-    @media screen and (max-width: $xsmall) {
-      padding-bottom: 60px;
-    }
+    padding-bottom: 60px;
   }
 
   .hero {
@@ -128,6 +126,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 p {
