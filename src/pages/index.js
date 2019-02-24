@@ -16,14 +16,25 @@ const confettiConfig = {
 };
 
 class Index extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isConfettiDisabled: false
+    }
+  }
+
   showSettings (event) {
     event.preventDefault();
   }
 
   componentDidMount() {
-    const button = document.querySelector("#helloWorld");
-    button.addEventListener("click", () => {
-      confetti(button, confettiConfig)
+    const confettiCanon = document.querySelector("#helloWorld");
+    confettiCanon.addEventListener("click", () => {
+      if (this.state.isConfettiDisabled === false) {
+        this.setState({isConfettiDisabled: true});
+        confetti(confettiCanon, confettiConfig);
+      }
     });
   }
 
