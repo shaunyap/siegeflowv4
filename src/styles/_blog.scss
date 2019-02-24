@@ -4,6 +4,16 @@
 
 .blog-post {
   max-width: 640px;
+
+  .blog-post-content a {
+    color: $PRIMARY;
+    text-decoration: none;
+  }
+
+  .blog-post-content a:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
 }
 
 .card {
