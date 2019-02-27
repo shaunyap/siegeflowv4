@@ -73,6 +73,7 @@ body {
 
   footer {
     position: absolute;
+    height: 60px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -112,6 +113,14 @@ body {
   @media screen and (max-width: $xsmall) {
     width: 100%;
   }
+  
+  @media screen and (min-width: $xsmall) {
+    width: 45%;
+  }
+
+  @media screen and (min-width: $medium) {
+    width: 24%;
+  }
 }
 
 
@@ -139,6 +148,11 @@ h3 {
 p {
   font-size: 1.2em;
   line-height: 1.7em;
+}
+
+.subtext {
+  font-size: 0.85em;
+  color: $DARKGREY;
 }
 
 

@@ -3,6 +3,8 @@ path: "/blog/moving-from-wordpress-to-gatsbyjs"
 date: "2019-02-17"
 title: "Powering Siegeflow.com with Gatsby"
 category: "blog"
+thumbnail: "./gatsby-hero.jpg"
+tags: ["Gatsby", "React.js", "Markdown", "SASS"]
 ---
 
 Moving from WordPress to Gatsby turned out to be a much easier decision than I had initially expected. It turns out that as I grew as a developer, most of my development stack is now JavaScript-based. 

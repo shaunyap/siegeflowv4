@@ -1,49 +1,59 @@
 import React from 'react';
 import Layout from '../components/layout';
+import { graphql } from 'gatsby';
 
-function Projects(props) {
+const Project = ({ data }) => {
     return (
         <Layout>
             <h1>Projects</h1>
             <div className="flexgrid">
-                <div className="card col">
-                    <img src="https://www.microsoft.com/inculture/uploads/prod/2018/01/MG_0071-_Land-400x225.jpg" alt="placeholder"></img>
-                    <div className="project-meta">
-                        <h3>Project Name</h3>
-                        <p>Technologies</p>
+            {data.allMarkdownRemark.edges
+                .filter(({node}) => node.frontmatter.category==="project") 
+                .map( ({ node }, index) => 
+                (
+                    <div className="card col" key={index}>
+                    {console.log(node.frontmatter.thumbnail)}
+                        <a href={node.frontmatter.path}><img src={node.frontmatter.thumbnail.childImageSharp.fluid.src} alt="placeholder" /></a>
+                        <div className="project-meta">
+                            <h3><a href={node.frontmatter.path}>{node.frontmatter.title}</a></h3>
+                            <p className="subtext">
+                                {node.frontmatter.tags.join(", ")}
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className="card col">
-                    <img src="https://www.microsoft.com/inculture/uploads/prod/2018/01/MG_0071-_Land-400x225.jpg" alt="placeholder"></img>
-                    <div className="project-meta">
-                        <h3>Project Name</h3>
-                        <p>Technologies</p>
-                    </div>
-                </div>
-                <div className="card col">
-                    <img src="https://www.microsoft.com/inculture/uploads/prod/2018/01/MG_0071-_Land-400x225.jpg" alt="placeholder"></img>
-                    <div className="project-meta">
-                        <h3>Project Name</h3>
-                        <p>Technologies</p>
-                    </div>
-                </div>
-                <div className="card col">
-                    <img src="https://www.microsoft.com/inculture/uploads/prod/2018/01/MG_0071-_Land-400x225.jpg" alt="placeholder"></img>
-                    <div className="project-meta">
-                        <h3>Project Name</h3>
-                        <p>Technologies</p>
-                    </div>
-                </div>
-                <div className="card col">
-                    <img src="https://www.microsoft.com/inculture/uploads/prod/2018/01/MG_0071-_Land-400x225.jpg" alt="placeholder"></img>
-                    <div className="project-meta">
-                        <h3>Project Name</h3>
-                        <p>Technologies</p>
-                    </div>
-                </div>
+                )
+            )}
             </div>
         </Layout>
     );
   }
 
-  export default Projects;
+
+export default Project;
+
+export const query = graphql`
+    query getProjects {
+    allMarkdownRemark (
+        sort: { fields: [frontmatter___date], order: DESC }
+    )
+        {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        path
+                        category
+                        tags
+                        thumbnail {
+                            childImageSharp {
+                                fluid {
+                                    src
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`

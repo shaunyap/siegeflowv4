@@ -3,8 +3,8 @@ path: "/projects/chatq"
 date: "2019-02-15"
 title: "Creating a referral rewards system with Viral Loops and React.js"
 category: "project"
-tech: ["React.js", "Redux.js", "Next.js", "Semantic UI", "SCSS"]
-
+thumbnail: "./ChatQCaseStudy.jpg"
+tags: ["React.js", "Redux.js", "Next.js", "Semantic UI", "SCSS"]
 ---
 #### [Github Page](https://github.com/shaunyap/chatq-prelaunch)
 
