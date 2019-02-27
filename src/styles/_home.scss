@@ -1,8 +1,16 @@
+.hero {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
 .intro {
   max-width: 540px;
   border: 2px solid #333333;
   padding: 2rem 1rem;
-  background-color: rgba($WHITE, 0.7);
+  background-color: rgba($WHITE, 0.85);
 
   @media screen and (min-width: $medium) {
     margin-left: 2rem;

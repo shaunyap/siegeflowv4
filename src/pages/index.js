@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { graphql, Link } from "gatsby";
 import Layout from '../components/layout';
 import { confetti } from 'dom-confetti';
+
 const confettiConfig = {
   angle: "75",
   spread: 100,
