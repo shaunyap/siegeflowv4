@@ -2,7 +2,7 @@
 @import "responsive";
 @import "nav";
 @import "home";
-@import "blog";
+@import "posts";
 
 
 // General
@@ -25,7 +25,7 @@ body {
   main {
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
   }
 
   .hero {
@@ -114,7 +114,7 @@ body {
   @media screen and (max-width: $xsmall) {
     width: 100%;
   }
-  
+
   @media screen and (min-width: $xsmall) {
     width: 45%;
   }

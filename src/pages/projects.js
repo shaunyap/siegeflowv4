@@ -8,11 +8,10 @@ const Project = ({ data }) => {
             <h1>Projects</h1>
             <div className="flexgrid">
             {data.allMarkdownRemark.edges
-                .filter(({node}) => node.frontmatter.category==="project") 
-                .map( ({ node }, index) => 
+                .filter(({node}) => node.frontmatter.category==="project")
+                .map( ({ node }, index) =>
                 (
                     <div className="card col" key={index}>
-                    {console.log(node.frontmatter.thumbnail)}
                         <a href={node.frontmatter.path}><img src={node.frontmatter.thumbnail.childImageSharp.fluid.src} alt="placeholder" /></a>
                         <div className="project-meta">
                             <h3><a href={node.frontmatter.path}>{node.frontmatter.title}</a></h3>
