@@ -15,12 +15,17 @@ const Blog = ({ data }) => {
         <Layout>
           <div className="flex-center">
             <div className="blog-index">
+            <h1>Blog</h1>
             {data.allMarkdownRemark.edges
                 .filter(({node}) => node.frontmatter.category==="blog")
                 .map( ({ node }, index) =>
                     <div key={index}>
                         {headerImg(node)}
                         <div className="post-meta">
+                            <a href={node.frontmatter.path}>
+                            <img src={node.frontmatter.thumbnail.childImageSharp.fluid.src} alt="siegeflow blog"/>
+                            </a>
+
                             <h3><a href={node.frontmatter.path}>{node.frontmatter.title}</a></h3>
                             <p className="subtext">{node.headings[0].value}</p>
                         </div>

@@ -72,6 +72,15 @@ body {
     }
   }
 
+  ol, ul {
+    line-height: 1.5em;
+  }
+
+  pre {
+    background-color: lighten($LIGHTGREY, 8%);
+    padding: 5px;
+  }
+
   footer {
     position: absolute;
     height: 60px;
@@ -144,6 +153,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  line-height: 1.5;
 }
 
 p {

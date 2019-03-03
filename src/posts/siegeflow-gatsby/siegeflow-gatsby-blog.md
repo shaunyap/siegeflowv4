@@ -3,7 +3,7 @@ path: "/blog/moving-from-wordpress-to-gatsbyjs"
 date: "2019-02-17"
 title: "Powering Siegeflow.com with Gatsby"
 category: "blog"
-thumbnail: "./gatsby-hero.jpg"
+thumbnail: "./gatsby-hero.png"
 tags: ["Gatsby", "React.js", "Markdown", "SASS"]
 ---
 
