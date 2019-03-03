@@ -1,15 +1,38 @@
 .topbar {
+  position: fixed;
   background: linear-gradient(to right, $PRIMARY, $PRIMARY-ALT, $ORANGE);
   min-height: 50px;
+  width: 100%;
+  z-index: 2;
 
+  #menu-logo {
+    opacity: 0;
+    height: 75px;
+    position: fixed;
+    border: 2px white solid;
+    -webkit-transition: 1s; /* Safari */
+    transition: 1s;
+    margin-top: 1rem;
+    margin-left: 5rem;
+
+    @media screen and (max-width: $xsmall) {
+      margin-left: 24px;
+      height: 50px;
+    }
+  }
   h3 {
     color: $WHITE;
     margin: 0 3rem;
-    padding: 13px 3px 0 3px;
+    padding: 10px 3px 0 3px;
 
     a {
       text-decoration: none;
       color: $WHITE;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: $PRIMARY-ALT;
     }
   }
 
@@ -30,8 +53,12 @@
   position: fixed;
   width: 24px;
   height: 20px;
-  right: 36px;
+  right: 5rem;
   top: 13px;
+
+  @media screen and (max-width: $xsmall) {
+    right: 24px;
+  }
 }
 
 /* Color/shape of burger icon bars */

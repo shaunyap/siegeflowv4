@@ -20,7 +20,6 @@ body {
 
 body {
   background-color: $BGCOLOR;
-  margin: 0;
 
   main {
     margin-left: 1rem;
@@ -28,10 +27,24 @@ body {
     margin-bottom: 90px;
   }
 
+  a {
+    color: $PRIMARY;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
   .hero {
     min-height: 30vh;
-    padding-top: 12vh;
-    padding-bottom: 12vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
+    @media screen and (max-width: $xsmall) {
+      padding-top: 12vh;  
+    }
   }
 
   .split-container {
@@ -98,6 +111,10 @@ body {
 
   .lefty, .righty {
     min-height: 350px;
+    @media screen and (max-width: $medium) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
   .lefty {
     background-color: $PRIMARY;

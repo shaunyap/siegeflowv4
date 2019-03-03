@@ -1,11 +1,12 @@
 import React from 'react';
 import { bubble as Menu } from 'react-burger-menu';
+import logo from "../images/logo_square.png"
 
 export default Header => {
   return (
     <div>
       <header className="topbar">
-      <h3 id="menu-logo"><a href="/">siegeflow</a></h3>
+      <a href="/"><img src={logo} alt="siegeflow" id="menu-logo" /></a>
       <Menu right>
         <a id="home" className="menu-item" href="/">Home</a>
         <a id="projects" className="menu-item" href="/projects">Projects</a>

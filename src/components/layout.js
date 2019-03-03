@@ -9,14 +9,14 @@ export default props => {
         <div id="root">
           <Helmet>
               <meta charSet="utf-8" />
-              <title>Siegeflow</title>
-              <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet" />
+              <title>{props.title}</title>
+              <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans|Ruthie" rel="stylesheet" />
           </Helmet>
           <Header />
           <main>
             {props.children}
           </main>
-          <footer className="flex-center">Copyright siegeflow 2019. Terms and Conditions | Privacy Policy</footer>
+          <footer className="flex-center">&copy; siegeflow 2019.</footer>
         </div>
     )
 }

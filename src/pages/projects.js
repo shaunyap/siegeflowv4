@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 const Project = ({ data }) => {
     return (
-        <Layout>
+        <Layout title="Projects: Front-end Developer based in Seattle | React.js | Swift">
             <h1>Projects</h1>
             <div className="flexgrid">
             {data.allMarkdownRemark.edges

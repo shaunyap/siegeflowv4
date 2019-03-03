@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { graphql, Link } from "gatsby";
 import Layout from '../components/layout';
 import { confetti } from 'dom-confetti';
+import logo from "../images/logo_square.png"
 
 const confettiConfig = {
   angle: "75",
@@ -37,22 +38,45 @@ class Index extends Component {
         confetti(confettiCanon, confettiConfig);
       }
     });
+
+    window.addEventListener("scroll",function(){
+      const target = document.querySelector("#menu-logo");
+      target.style.transition = "all 1s";
+
+      if(window.pageYOffset > 100){
+        target.style.opacity = 100;
+      }
+      else if(window.pageYOffset < 100){
+        target.style.opacity = 0;
+      }
+    },false);
   }
 
   render() {
     const { data } = this.props;
     return (
-            <Layout>
+            <Layout title="Front-end Developer based in Seattle | React.js | Swift">
                 <section className="hero flex-center">
                   <div className="intro">
-                    <h1 id="helloWorld">Hello world!</h1>
+                    <div className="flex-center">
+                      <img src = {logo} id = "intro-logo"/>
+                    </div>
+                    <div className="flex-center">
+                      <h2 id="helloWorld">Hello world!</h2>
+                    </div>
+                    <div className="flex-center">
+                      <p className="subheader">Frontend Development in React.js, JavaScript, Swift</p>
+                    </div>
+                    <hr />
                     <p>I'm Shaun, and after spending the last four years working on <a href="/">personal coding projects</a>, I'm now looking for a career switch to React or iOS development.</p>
 
                     <p>Previously, I've had an exhilarating career in digital marketing which has taken me everywhere from Singapore to Dubai, San Francisco to Taipei. <span id="sma-hover">I've even picked up some awards along the way.</span></p>
 
-                    <p>Despite that, I've always had a feeling that my true passions lay elsewhere. And after years of tinkering and experimenting, I'm ready to show I have what it takes to thrive.</p>
+                    <p>Despite that, I've always had a feeling that my true calling lay elsewhere. And after years of tinkering and experimenting, I'm ready to show I have what it takes to thrive.</p>
 
                     <p>So let me buy you coffee. Better yet, let me show you on a whiteboard.</p>
+
+                    <p className="signOff">- shaunyap</p>
                   </div>
                 </section>
                 <section className="split-container flex-center-med-up">
@@ -62,8 +86,8 @@ class Index extends Component {
                           <h2>Projects</h2>
                           <ul>
                           {data.allMarkdownRemark.edges
-                            .filter(({node}) => node.frontmatter.category==="project") 
-                            .map( ({ node }, index) => 
+                            .filter(({node}) => node.frontmatter.category==="project")
+                            .map( ({ node }, index) =>
                             (
                               <li key={index}>
                                 <Link to = {node.frontmatter.path}>
@@ -82,8 +106,8 @@ class Index extends Component {
                           <h2>Blog</h2>
                           <ul>
                           {data.allMarkdownRemark.edges
-                            .filter(({node}) => node.frontmatter.category==="blog") 
-                            .map( ({ node }, index) => 
+                            .filter(({node}) => node.frontmatter.category==="blog")
+                            .map( ({ node }, index) =>
                             (
                               <li key={index}>
                                 <Link to = {node.frontmatter.path}>

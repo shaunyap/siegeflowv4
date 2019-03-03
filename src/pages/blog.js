@@ -12,7 +12,7 @@ const Blog = ({ data }) => {
   }
 
     return (
-        <Layout>
+        <Layout title="Blog: Front-end Developer based in Seattle | React.js | Swift">
           <div className="flex-center">
             <div className="blog-index">
             <h1>Blog</h1>
