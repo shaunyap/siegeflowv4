@@ -6,23 +6,32 @@ category: "project"
 thumbnail: "./header.jpg"
 tags: ["Swift", "iOS"]
 ---
-![Chat Q Case Study](./header.jpg)
+![Todoey Mockup](./header.jpg)
 
-Todoey is a Todo app for iOS, and was done as part of the [iOS App Development Bootcamp on Udemy](https://www.udemy.com/ios-12-app-development-bootcamp/). It ties together a whole slew of Swift concepts to create a beautiful UI.
+Todoey is a Todo app for iOS, and was done as part of the [iOS App Development Bootcamp on Udemy](https://www.udemy.com/ios-12-app-development-bootcamp/). It ties together a whole slew of Swift concepts to create a beautiful App. Here is what I've learned making this app.
 
 ### Persisting data using Core Data vs Realm
-One of the basic but key needs of a Todo app is to, well, store your todos. This means what you've written has to be saved to be viewed later and this data has to be stored in a database somewhere.
+One of the basic but key needs of a Todo app is to, well, store your todos. This means what you've written has to be saved to be viewed later and this data has to be stored somewhere.
 
-During the course, data was first persisted using a plist, before the instructor explained that plists aren't a good way to store data like this. Plists load in their entirety with the app, and are great for loading basic settings, but as the data grows, the app boot process gets more and more sluggish and thus should be used sparingly.
+Data was first persisted using a plist, before the instructor explained that plists aren't a good place for it in this case. The reason is that plists load in their entirety when the app starts. This means that as the data grows, the app boot process gets gradually more sluggish which makes for a poor user experience.
 
-We then wrote the data storage and retrieval functions in Apple's own Core Data. It was an important concept to cover and worked great albeit after strugging a bit with the syntax.
+The data storage and retrieval functions were then created in Core Data. It was an important concept to cover and worked great albeit after strugging a bit with the complexities like NSPredicates.
 
-Finally, we rewrote this using the open-sourced [Realm.io](https://realm.io/). I was surprised to find that it supposedly performs faster than SQLite and Core Data while being really easy to write. This is definitely a platform to loo deeper into as it supports not just Swift, but JavaScript, Java and other technologies that prevelant in cross-platform use.
+Finally, we rewrote this using the open-sourced [Realm.io](https://realm.io/). I was surprised to find that it has been [tested to perform faster than SQLite and Core Data](https://dzone.com/articles/how-realm-is-better-as-compared-to-sqlite) while being really easy to write. This is definitely a platform worth looking deeper into as it supports not just Swift, but JavaScript, Java and other technologies that prevelant in cross-platform use.
 
 ### Modeling data categories
-One of the cooler things about this app that many other todo tutorials doesn't do is to create a data model for the categories. Like some of the more fully featured todo apps, there are categories where you can save the todos into. Each todo should 
+One of the cooler things about this app that many other todo tutorials teach is creating a data model. This allows the app to have categories that todos can be organized into, much like pretty much any commercial todo app.
+
+In Todoey, each todo belongs to a single category, and each category can have multiple todo items. Furthermore, Todo items also have a 'done' property that can be either true or false. Touching or swiping the task toggles the property. 
 
 ### App Delegates
+The app delegate is a fundemental iOS concept that was new to me doing this project. It means that an object is able to take on a task that the app needs doing. 
 
+A real life example of this concept is getting a meal. While you can prepare and cook the meal on your own, delegates might be a meal delivery service, or a kind family member - both get the task done for you. They handle the details, while you know you're getting a meal.
 
-### Fun stuff
+In this app, I made my view controllers the delegate for various things, like handling segues between screens and populating the TableView.
+
+### Miscellaneous, Fun stuff
+I also got to implement a bunch of fun stuff, like using the Chameleon framework to generate random colors for categories, and then using it to create a color gradient for the tasks in the category.
+
+It was also interesting to implement [SwipeCellKit](https://github.com/SwipeCellKit/SwipeCellKit) - a library to create swipe gestures like the one you see in Mail.
