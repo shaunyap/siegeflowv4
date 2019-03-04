@@ -19,12 +19,12 @@ module.exports = {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 590,
+                maxWidth: 768,
               }
             }
           ]
         }
-      }, 
+      },
       `gatsby-plugin-sass`,
       `gatsby-remark-copy-linked-files`,
       `gatsby-transformer-sharp`,
