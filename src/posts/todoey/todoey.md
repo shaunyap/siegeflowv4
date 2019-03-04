@@ -7,7 +7,7 @@ thumbnail: "./header.jpg"
 tags: ["Swift", "iOS"]
 ---
 ![Todoey Mockup](./header.jpg)
-
+[Github Repo](https://github.com/shaunyap/Todoey)
 Todoey is a Todo app for iOS, and was done as part of the [iOS App Development Bootcamp on Udemy](https://www.udemy.com/ios-12-app-development-bootcamp/). It ties together a whole slew of Swift concepts to create a beautiful App. Here is what I've learned making this app.
 
 ### Persisting data using Core Data vs Realm
@@ -17,7 +17,55 @@ Data was first persisted using a plist, before the instructor explained that pli
 
 The data storage and retrieval functions were then created in Core Data. It was an important concept to cover and worked great albeit after strugging a bit with the complexities like NSPredicates.
 
-Finally, we rewrote this using the open-sourced [Realm.io](https://realm.io/). I was surprised to find that it has been [tested to perform faster than SQLite and Core Data](https://dzone.com/articles/how-realm-is-better-as-compared-to-sqlite) while being really easy to write. This is definitely a platform worth looking deeper into as it supports not just Swift, but JavaScript, Java and other technologies that prevelant in cross-platform use.
+Finally, we rewrote this using the open-sourced [Realm.io](https://realm.io/). I was surprised to find that it has been [tested to perform faster than SQLite and Core Data](https://dzone.com/articles/how-realm-is-better-as-compared-to-sqlite) while being much easier to understand and write than Core Data. 
+
+Here is an example of adding a new item to be persisted by Core Data:
+
+You first need to define the context, as well as a saveItems method
+```
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+func saveItems() {
+	do {
+		try context.save()
+	} catch {
+		print("error saving context. \(error)")
+	}
+	self.tableView.reloadData()
+}
+```
+Then in order to add the item when you click on the Add button in the UIAlert, you create a newItem object and put all the information as key-value pairs before pushing it into an itemArray to be saved:
+```
+            let newItem = Item(context: self.context)
+            newItem.title = textField.text!
+            newItem.done = false
+            newItem.parentCategory = self.selectedCategory
+            self.itemArray.append(newItem)
+
+            self.saveItems()
+```      
+In Realm, however, after you define Realm at the start with a simple
+```
+let realm = try! Realm()
+```
+All you need to do is to call realm.write with the item object, and wrap the entire thing in a do-catch block. You not only save a couple lines of code, but also make it esier to understand. 
+```
+            if let currentCategory = self.selectedCategory {
+                do {
+                    try self.realm.write{
+                        let newItem = Item()
+                        newItem.title = textField.text!
+                        newItem.dateCreated = Date()
+                        currentCategory.items.append(newItem)
+                    }
+                } catch {
+                    print("error saving item. \(error)")
+                }
+            }
+            self.tableView.reloadData()
+```
+
+Realm is definitely a platform worth looking deeper into as it supports not just Swift, but JavaScript, Java and other technologies that prevelant in cross-platform use.
 
 ### Modeling data categories
 One of the cooler things about this app that many other todo tutorials teach is creating a data model. This allows the app to have categories that todos can be organized into, much like pretty much any commercial todo app.
