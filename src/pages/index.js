@@ -59,7 +59,7 @@ class Index extends Component {
                 <section className="hero flex-center">
                   <div className="intro">
                     <div className="flex-center">
-                      <img src = {logo} id = "intro-logo"/>
+                      <img src = {logo} id = "intro-logo" alt="siegeflow logo"/>
                     </div>
                     <div className="flex-center">
                       <h2 id="helloWorld">Hello world!</h2>
