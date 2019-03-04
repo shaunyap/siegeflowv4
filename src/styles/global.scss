@@ -43,7 +43,7 @@ body {
     padding-bottom: 10vh;
 
     @media screen and (max-width: $xsmall) {
-      padding-top: 12vh;  
+      padding-top: 12vh;
     }
   }
 
@@ -107,6 +107,23 @@ body {
     @media screen and (max-width: $xsmall) {
       font-size: 0.7em;
     }
+
+    p {
+      text-align: center;
+    }
+
+    .social i {
+      color: $PRIMARY-ALT;
+    }
+
+    .social i:hover {
+      color: $WHITE;
+    }
+  }
+
+  .social i {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .lefty, .righty {
@@ -114,6 +131,10 @@ body {
     @media screen and (max-width: $medium) {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+    }
+
+    a {
+      color: $MEDGREY;
     }
   }
   .lefty {
@@ -124,6 +145,9 @@ body {
     background-color: $ACCENT;
   }
 }
+
+
+
 
 // Grid
 .flexgrid {

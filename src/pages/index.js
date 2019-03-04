@@ -70,6 +70,19 @@ class Index extends Component {
                     <div className="flex-center">
                       <p className="subheader">Frontend Development in React.js, JavaScript, Swift</p>
                     </div>
+                    <div className="flex-center">
+                      <div className="social">
+                        <a href="https://www.github.com/shaunyap">
+                          <i className="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shauny">
+                          <i className="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/shaunyap">
+                          <i className="fab fa-instagram"></i>
+                        </a>
+                      </div>
+                    </div>
                     <hr />
                     <p>I'm Shaun, and after spending the last four years working on <a href="/">personal coding projects</a>, I'm now looking for a career switch to React or iOS development.</p>
 
@@ -86,7 +99,7 @@ class Index extends Component {
                   <div className="left-container">
                     <div className="lefty flex-center v-center">
                       <div>
-                          <h2>Projects</h2>
+                          <h2><a href="./projects">Projects</a></h2>
                           <ul>
                           {data.allMarkdownRemark.edges
                             .filter(({node}) => node.frontmatter.category==="project")
@@ -106,7 +119,7 @@ class Index extends Component {
                   <div className="right-container">
                     <div className="righty flex-center v-center">
                       <div>
-                          <h2>Blog</h2>
+                          <h2><a href="./blog">Blog</a></h2>
                           <ul>
                           {data.allMarkdownRemark.edges
                             .filter(({node}) => node.frontmatter.category==="blog")
