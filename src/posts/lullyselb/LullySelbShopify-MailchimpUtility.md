@@ -137,7 +137,7 @@ function deleteUsersFromMailchimpList(userEmail, list) {
   }
   ```
   
-Essentially what the functino does is to check if a user email is in a given list, and if so delete it. The interesting thing here is that the user email is passed as a md5 hash into the API endpoint.
+Essentially what the function does is to check if a user email is in a given list, and if so delete it. The interesting thing here is that the user email is passed as a md5 hash into the API endpoint.
 
 ## Closing thoughts
 Writing this out I now realize that there might be a better way to make the delete call, instead of it through a forEach loop where I make individual API calls. However, I'm quite happy how it turned out as it works quickly without fuss. If you have suggested improvements do let me know.
