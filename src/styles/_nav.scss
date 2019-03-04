@@ -5,8 +5,11 @@
   width: 100%;
   z-index: 2;
 
-  #menu-logo {
+  .home-menu-logo{
     opacity: 0;
+  }
+  
+  #menu-logo {
     height: 75px;
     position: fixed;
     border: 2px white solid;

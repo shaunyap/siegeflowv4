@@ -8,7 +8,7 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
+    <Layout title={frontmatter.title + " | siegeflow: front-end development"} >
     <div className="blog-post-container flex-center">
       <div className="blog-post">
         <h1>{frontmatter.title}</h1>

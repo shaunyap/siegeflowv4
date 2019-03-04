@@ -30,17 +30,20 @@ class Index extends Component {
     event.preventDefault();
   }
 
+
   componentDidMount() {
     const confettiCanon = document.querySelector("#helloWorld");
+    const target = document.querySelector("#menu-logo");
+
     confettiCanon.addEventListener("click", () => {
       if (this.state.isConfettiDisabled === false) {
         this.setState({isConfettiDisabled: true});
         confetti(confettiCanon, confettiConfig);
       }
     });
+    target.classList.add("home-menu-logo");
 
     window.addEventListener("scroll",function(){
-      const target = document.querySelector("#menu-logo");
       target.style.transition = "all 1s";
 
       if(window.pageYOffset > 100){
