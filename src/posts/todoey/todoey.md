@@ -8,6 +8,7 @@ tags: ["Swift", "iOS"]
 ---
 ![Todoey Mockup](./header.jpg)
 [Github Repo](https://github.com/shaunyap/Todoey)
+
 Todoey is a Todo app for iOS, and was done as part of the [iOS App Development Bootcamp on Udemy](https://www.udemy.com/ios-12-app-development-bootcamp/). It ties together a whole slew of Swift concepts to create a beautiful App. Here is what I've learned making this app.
 
 ### Persisting data using Core Data vs Realm
