@@ -1,9 +1,9 @@
 ---
-path: /blog/gatsbyjs-qol-improvements
-date: 2019-03-08
-title: How I improved my website performance while paying less in hosting
-category: blog
-thumbnail: "./thumbnail.jpg"
+path: "/blog/gatsbyjs-qol-improvements"
+date: "2019-03-08"
+title: "How I improved my website performance while paying less in hosting"
+category: "blog"
+thumbnail: "./thumbnail.png"
 tags: ["React.js", "Redux.js", "Next.js", "Semantic UI", "SCSS"]
 ---
 
