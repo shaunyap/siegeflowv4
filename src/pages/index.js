@@ -84,13 +84,11 @@ class Index extends Component {
                       </div>
                     </div>
                     <hr />
-                    <p>I'm Shaun, and after spending the last four years working on <a href="/">personal coding projects</a>, I'm now looking for a career switch to React or iOS development.</p>
+                    <p>I'm Shaun, digital marketer and tech geek based in Seattle. I work on <a href="/">personal coding projects</a> and other nerdy projects in my free time.</p>
 
-                    <p>Previously, I've had an exhilarating career in digital marketing which has taken me everywhere from Singapore to Dubai, San Francisco to Taipei. <span id="sma-hover">I've even picked up some awards along the way.</span></p>
+                    <p>Originally from Singapore, I lived in Dubai for three years before moving to Seattle. I'm pretty new here, so I'm always looking for places to check out and things to do.</p>
 
-                    <p>Despite that, I've always had a feeling that my true calling lay elsewhere. And after years of tinkering and experimenting, I'm ready to show I have what it takes to thrive.</p>
-
-                    <p>So let me buy you coffee. Better yet, let me show you on a whiteboard.</p>
+                    <p>So let me buy you coffee. Better yet, lets work on a nerdy passion project together.</p>
 
                     <p className="signOff">- shaunyap</p>
                   </div>
