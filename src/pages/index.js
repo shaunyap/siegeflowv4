@@ -84,7 +84,7 @@ class Index extends Component {
                       </div>
                     </div>
                     <hr />
-                    <p>I'm Shaun, digital marketer and tech geek based in Seattle. I work on <a href="/">personal coding projects</a> and other nerdy projects in my free time.</p>
+                    <p>I'm Shaun, digital marketer and tech geek based in Seattle. I work on <a href="/projects">personal coding projects</a> and other nerdy projects in my free time.</p>
 
                     <p>Originally from Singapore, I lived in Dubai for three years before moving to Seattle. I'm pretty new here, so I'm always looking for places to check out and things to do.</p>
 
