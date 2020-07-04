@@ -58,7 +58,7 @@ class Index extends Component {
   render() {
     const { data } = this.props;
     return (
-            <Layout title="Front-end Developer based in Seattle | React.js | Swift">
+            <Layout title="Front-end Developer x Web Marketer based in Seattle | React.js">
                 <section className="hero flex-center">
                   <div className="intro">
                     <div className="flex-center">
@@ -68,7 +68,7 @@ class Index extends Component {
                       <h2 id="helloWorld">Hello world!</h2>
                     </div>
                     <div className="flex-center">
-                      <p className="subheader">Frontend Development in React.js, JavaScript, Swift</p>
+                      <p className="subheader">Frontend Development, Web Marketing</p>
                     </div>
                     <div className="flex-center">
                       <div className="social">
@@ -84,13 +84,14 @@ class Index extends Component {
                       </div>
                     </div>
                     <hr />
-                    <p>I'm Shaun, digital marketer and tech geek based in Seattle. I work on <a href="/projects">personal coding projects</a> and other nerdy projects in my free time.</p>
+                    <div className="copyContainer">
+                      <p>I'm Shaun, a front-end developer and digital marketer in Seattle currently working at <a href="https://www.chef.io">Chef Software</a>.</p>
+                      <p>In a past life, I did some <a href="https://www.caltex.com/sg/about-us/news/2012/driving-change-with-caltex-community-project-raises-105420-this-past-weekend-for-needy-elderly-nationwide.html">award-winning work</a> at the <a href="https://www.https://wavemakerglobal.com/">agency formerly known as MEC</a> in Asia as well as the Middle East. I was also fortunate to have worked on a diverse variety of projects for freelance clients.</p>  
+                        
+                      <p>You can see <a href="/projects">a selection of professional and personal projects here.</a></p>
 
-                    <p>Originally from Singapore, I lived in Dubai for three years before moving to Seattle. I'm pretty new here, so I'm always looking for places to check out and things to do.</p>
-
-                    <p>So let me buy you coffee. Better yet, lets work on a nerdy passion project together.</p>
-
-                    <p className="signOff">- shaunyap</p>
+                      <p className="signOff">- shaunyap</p>
+                    </div>
                   </div>
                 </section>
                 <section className="split-container flex-center-med-up">

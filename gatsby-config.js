@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "React.JS / Swift development | Siegeflow",
+    title: "Web Development + Digital Marketing | Shaun Yap",
     author: "Shaun Yap",
     description: "A frontend developer portfolio built using Gatsby.js"
   },
