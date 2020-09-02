@@ -100,7 +100,8 @@ The function deleteUsersFromMailchimpList is written as such:
 ```
 function deleteUsersFromMailchimpList(userEmail, list) {
     const emailHash = md5(userEmail);
-    const mailchimpGetEndPoint = "https://us11.api.mailchimp.com/3.0/lists/" + list + "/members/" + emailHash
+    const mailchimpGetEndPoint = "https://us11.api.mailchimp.com/3.0/lists/" + list 
+    + "/members/" + emailHash
 
     axios({
       method:'get',
